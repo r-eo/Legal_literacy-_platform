@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Literacy Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+       LegalEase
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/student">Students</a>
+        <a href="/professional">Professionals</a>
+        <a href="/senior">Senior Citizens</a>
+        <!-- Language Dropdown -->
+        <div class="language-dropdown">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+    </nav>
+    <section class="hero">
+        <img src="{{ url_for('static', filename='images/law.webp') }}" alt="Legal Awareness" class="hero-image">
+        <div class="hero-text">Empowering Communities with Legal Knowledge</div>
+    </section>
+    
+    <div class="container">
+        <div class="main-content">
+            <h2>Famous Legal Information</h2>
+            <div class="legal-card">
+                <h2>Right to Information (RTI) Act</h2>
+                <p>The Right to Information (RTI) Act, 2005, empowers Indian citizens to access information from public authorities. It promotes transparency and accountability in government functioning by allowing individuals to request information about government activities, policies, and decisions. Public authorities are required to respond to these requests within a stipulated time frame, ensuring openness in administration.</p>
+                <a href="https://rti.gov.in/" target="_blank">Learn More</a>
+            </div>
+            <div class="legal-card">
+                <h2>Consumer Protection Act</h2>
+                <p>The Consumer Protection Act, 2019, aims to safeguard the rights of consumers in India. It provides a mechanism for redressal of consumer grievances, ensuring fair trade practices. The Act establishes Consumer Dispute Redressal Commissions at various levels and introduces measures like mediation, product liability, and penalties for misleading advertisements to protect consumers' interests.</p>
+                <a href="https://consumerhelpline.gov.in/" target="_blank">Learn More</a>
+            </div>
+            <div class="legal-card">
+                <h2>Indian Penal Code (IPC)</h2>
+                <p>The Indian Penal Code (IPC) is the principal criminal code in India, established in 1860. It defines various offenses and prescribes punishments for them. The IPC covers a wide range of crimes, including theft, assault, and murder, ensuring justice and maintaining public order in the country. It has been amended several times to address evolving legal needs.</p>
+                <a href="https://www.indiacode.nic.in/" target="_blank">Learn More</a>
+            </div>
+        </div>
+        <aside class="sidebar">
+            <h3>Choose Your Category</h3>
+            <ul>
+                <li><a href="{{ url_for('student') }}">For Students</a></li>
+                <li><a href="{{ url_for('professional') }}">For Professionals</a></li>
+                <li><a href="{{ url_for('senior') }}">For Senior Citizens</a></li>
+            </ul>
+
+            <!-- Dummy Chatbot -->
+            <div class="chatbot">
+                <div class="chatbot-header">
+                    <h4>LegalEase Assistant</h4>
+                </div>
+                <div class="chatbot-body">
+                    <div class="chatbot-messages">
+                        <div class="message bot-message">Hi! How can I assist you today?</div>
+                    </div>
+                    <div class="chatbot-input">
+                        <input type="text" placeholder="Type your message..." id="chatbot-input">
+                        <button id="chatbot-send">Send</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        &copy; 2025 Legal Literacy Platform | All Rights Reserved
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
